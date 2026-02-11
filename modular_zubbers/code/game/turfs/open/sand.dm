@@ -66,3 +66,71 @@
 	initial_gas_mix = MOONSTATION_ATMOS
 	planetary_atmos = TRUE
 
+// Nitrodesert tiles!
+// Copied entirely from the above for ~now~
+// Sand, the base turf. Made of fine filaments of glass. Ow.
+/turf/open/misc/nitrodesert_sand
+	name = "filament sand"
+	desc = "This sand is made of tiny, sharp filaments that cut through flesh, fiber, and metal alike. When disturbed by a sufficiently large force, it releases a cloud of these filaments into the air along with sparks of static."
+	gender = NEUTER
+	initial_gas_mix = NITRODESERT_ATMOS
+	icon = 'modular_zubbers/icons/turf/lunar_rock.dmi' // Icons placeholder
+	icon_state = "0,0"
+	planetary_atmos = TRUE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	baseturfs = /turf/open/misc/nitrodesert_rock
+	tiled_turf = FALSE
+
+turf/open/misc/nitrodesert_sand/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/diggable, /obj/item/stack/ore/glass, 2, worm_chance = 3)
+	icon_state = "[x % 10],[y % 10]"
+
+/turf/open/misc/nitrodesert_sand/break_tile()
+	. = ..()
+	icon_state = "damaged"
+
+/turf/open/misc/nitrodesert_sand/broken_states()
+	return list("damaged")
+
+//Rock
+/turf/open/misc/nitrodesert_rock
+	name = "lunar rock"
+	gender = NEUTER
+	desc = "Crystalline, off-white and brown rock that pricks your fingers when you touch it."
+	initial_gas_mix = NITRODESERT_ATMOS
+	icon = 'modular_zubbers/icons/turf/lunar_rock.dmi'
+	icon_state = "0,0"
+	planetary_atmos = TRUE
+
+/turf/open/misc/nitrodesert_rock/break_tile()
+	. = ..()
+	icon_state = "damaged"
+
+/turf/open/misc/nitrodesert_rock/broken_states()
+	return list("damaged")
+
+/turf/open/misc/nitrodesert_rock/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/diggable, /obj/item/stack/sheet/mineral/stone, 2, worm_chance = 1)
+	icon_state = "[x % 10],[y % 10]"
+
+//Misc
+/turf/open/floor/plating/rust/nitrodesert
+	initial_gas_mix = NITRODESERT_ATMOS
+	planetary_atmos = TRUE
+
+/turf/open/floor/catwalk_floor/rust
+	baseturfs = /turf/open/floor/plating/rust
+
+/turf/open/floor/catwalk_floor/rust/nitrodesert
+	initial_gas_mix = NITRODESERT_ATMOS
+	planetary_atmos = TRUE
+
+/turf/open/floor/iron/solarpanel/nitrodesert
+	initial_gas_mix = NITRODESERT_ATMOS
+	planetary_atmos = TRUE

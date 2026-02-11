@@ -1,0 +1,83 @@
+// Helpfully stolen from dunepost.dm
+// //Surface
+/datum/map_generator/cave_generator/dunepost
+
+	weighted_open_turf_types = list(/turf/open/misc/nitrodesert_sand = 1)
+	weighted_closed_turf_types = list(/turf/closed/mineral/random/lunar = 1)
+
+	weighted_flora_spawn_list = list(
+		/obj/structure/flora/scrap = 10,
+		/obj/structure/flora/ash/cacti = 20,
+		/obj/structure/flora/bush/ferny = 5,
+		/obj/structure/flora/bush/grassy/style_random = 1,
+		/obj/structure/flora/bush/leavy/style_random = 1,
+		/obj/structure/flora/bush/sparsegrass/style_random = 3,
+		/obj/structure/flora/bush/stalky/style_random = 5
+	)
+
+	weighted_mob_spawn_list = list(
+		/mob/living/basic/mining/cazador = 10,
+		/mob/living/basic/mining/scorpion = 40,
+		/obj/effect/decal/cleanable/ants/fire = 50,
+		/mob/living/basic/mining/moonsnake = 20
+	)
+
+	weighted_feature_spawn_list = list(
+		/obj/structure/geyser/random = 4,
+		/obj/structure/antfarm/natural = 1
+	)
+
+	flora_spawn_chance = 4
+	feature_spawn_chance = 0.1
+	mob_spawn_chance = 0.3
+	initial_closed_chance = 30
+	smoothing_iterations = 50
+	birth_limit = 4
+	death_limit = 3
+
+//Underground
+/datum/map_generator/cave_generator/dunepost/cave
+
+	weighted_open_turf_types = list(
+		/turf/open/misc/nitrodesert_rock = 1
+	)
+	weighted_closed_turf_types = list(
+		/turf/closed/mineral/random/lunar_cave = 98,
+		/turf/closed/mineral/strange_rock/lunar_cave = 2
+	)
+
+
+	weighted_mob_spawn_list = list(
+		/mob/living/basic/mining/basilisk = 20,
+		/obj/effect/spawner/random/lavaland_mob/goliath = 10,
+		/mob/living/basic/mining/watcher = 30,
+		/mob/living/basic/mining/brimdemon = 10,
+		/obj/structure/spawner/mining/goliath = 3,
+		/mob/living/basic/mining/moonsnake = 20
+	)
+
+	weighted_flora_spawn_list = list(
+		/obj/structure/flora/rock/style_random = 20,
+		/obj/structure/flora/rock/pile/style_random = 20,
+		/obj/structure/flora/ash/cap_shroom = 10,
+		/obj/structure/flora/ash/leaf_shroom = 5,
+		/obj/structure/flora/ash/stem_shroom = 5,
+		/obj/structure/flora/ash/tall_shroom = 5,
+	)
+
+	weighted_feature_spawn_list = list(
+		/obj/structure/geyser/hollowwater = 10,
+		/obj/structure/geyser/plasma_oxide = 10,
+		/obj/structure/geyser/protozine = 10,
+		/obj/structure/geyser/random = 2,
+		/obj/structure/geyser/wittel = 10,
+		/obj/structure/ore_vent/random/nitrodesert/cave = 1 // This was at 100 and the sole item in the list, but it was runtiming.
+	)
+
+	flora_spawn_chance = 2
+	feature_spawn_chance = 0.4
+	mob_spawn_chance = 1.5
+	initial_closed_chance = 40
+	smoothing_iterations = 50
+	birth_limit = 4
+	death_limit = 3

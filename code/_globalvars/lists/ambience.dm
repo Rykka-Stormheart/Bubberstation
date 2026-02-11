@@ -207,4 +207,5 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_RUINS = GLOB.ruins_ambience,
 	AMBIENCE_SPACE = GLOB.space_ambience,
 	AMBIENCE_SPOOKY = GLOB.spooky_ambience,
+	AMBIENCE_NITRODESERT_SURFACE= GLOB.nitrodesert_surface_ambience, // Bubber edit, adds desert ambience
 ))

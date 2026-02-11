@@ -9,7 +9,7 @@
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_TURF_CHASM
 	canSmoothWith = SMOOTH_GROUP_TURF_CHASM
-	
+
 	baseturfs = /turf/open/openspace/moonstation
 
 	plane = FLOOR_PLANE
@@ -20,6 +20,35 @@
 	. = ..()
 
 /turf/open/openspace/moonstation/LateInitialize()
+	. = ..()
+	var/turf/T = GET_TURF_BELOW(src)
+	if(ismineralturf(T))
+		var/turf/closed/mineral/M = T
+		M.gets_drilled()
+
+/turf/open/openspace/nitrodesert
+
+	icon = 'icons/turf/floors/moonchasm.dmi'
+	icon_state = "moonchasm-255"
+	base_icon_state = "moonchasm"
+
+	initial_gas_mix = NITRODESERT_ATMOS
+	planetary_atmos = TRUE
+
+	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
+	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_TURF_CHASM
+	canSmoothWith = SMOOTH_GROUP_TURF_CHASM
+
+	baseturfs = /turf/open/openspace/nitrodesert
+
+	plane = FLOOR_PLANE
+	layer = TOPDOWN_LAYER
+
+/turf/open/openspace/nitrodesert/Initialize(mapload)
+	icon_state = ""
+	. = ..()
+
+/turf/open/openspace/nitrodesert/LateInitialize()
 	. = ..()
 	var/turf/T = GET_TURF_BELOW(src)
 	if(ismineralturf(T))
