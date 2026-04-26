@@ -294,7 +294,7 @@
 /area/space)
 "by" = (
 /obj/structure/table/glass/plasmaglass,
-/obj/item/computer_disk/ordnance,
+/obj/item/disk/computer/ordnance,
 /obj/item/circuitboard/aicore,
 /turf/open/floor/carpet/purple,
 /area/space)
@@ -3200,7 +3200,7 @@
 "lJ" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/dna_infuser,
-/obj/item/infuser_book{
+/obj/item/tgui_book/manual/infuser{
 	pixel_x = -6
 	},
 /turf/open/floor/iron/white,
@@ -10482,7 +10482,7 @@
 /area/space)
 "MT" = (
 /obj/machinery/modular_computer/preset/id,
-/obj/item/computer_disk/quartermaster,
+/obj/item/disk/computer/quartermaster,
 /turf/open/floor/wood/parquet,
 /area/space)
 "MU" = (
@@ -12935,13 +12935,13 @@
 "Ws" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/rack/shelf,
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = 2;
 	pixel_y = 8
 	},
-/obj/item/computer_disk,
-/obj/item/computer_disk,
-/obj/item/computer_disk/ordnance{
+/obj/item/disk/computer,
+/obj/item/disk/computer,
+/obj/item/disk/computer/ordnance{
 	pixel_y = -7
 	},
 /turf/open/floor/engine,
