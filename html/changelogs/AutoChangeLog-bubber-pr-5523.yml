@@ -1,0 +1,4 @@
+author: "nikothedude"
+delete-after: True
+changes:
+  - rscadd: "Family heirloom users can now use a quirk preference to, instead of getting a random item, mark an item inhand as an heirloom."
