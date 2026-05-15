@@ -1,0 +1,4 @@
+author: "nikothedude"
+delete-after: True
+changes:
+  - rscadd: "Exploitables, background, and security records are now distinct record fields, instead of being combinced."
