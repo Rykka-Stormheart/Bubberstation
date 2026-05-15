@@ -170,6 +170,7 @@
 	datum/mind/mind_ref,
 	// BUBBER EDIT BEGIN - Records
 	exploitable_information = "",
+	background_information = "",
 )
 	. = ..()
 	src.locked_dna = locked_dna
@@ -178,7 +179,8 @@
 
 	GLOB.manifest.locked += src
 
-	// BUBBER EDIT BEGIN - Records
+	// BUBBER EDIT BEGIn - Records
+	src.background_information = background_information
 	src.exploitable_information = exploitable_information
 	// BUBBER EDIT END
 
