@@ -1,4 +1,0 @@
-author: "MrGloopy"
-delete-after: True
-changes:
-  - balance: "Removed mutual exclusivity of Common Second Language and Bilingual quirks."

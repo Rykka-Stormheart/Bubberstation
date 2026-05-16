@@ -1,4 +1,0 @@
-author: "mintyphresh"
-delete-after: True
-changes:
-  - rscadd: "Using the \"toggle reflexes\" verb now lets subs ignore snaps and clicks, as well as inspect doms without flustering away."

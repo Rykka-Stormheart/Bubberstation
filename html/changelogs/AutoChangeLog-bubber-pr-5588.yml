@@ -1,4 +1,0 @@
-author: "nikothedude"
-delete-after: True
-changes:
-  - rscadd: "Hungry quirk is now -2 and customizable"
